@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Player;
+use Throwable;
+use Log;
 
 class WelcomeController extends Controller
 {
@@ -17,8 +19,13 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        //
-        $players = Player::getWithContoryByPaginate(self::PAGINATE_LIMIT);
-        return view('welcome')->with('players', $players);
+        try {
+            //
+            $players = Player::getWithCountryBySimplePaginate(self::PAGINATE_LIMIT);
+            return view('welcome')->with('players', $players);
+        } catch(Throwable $e) {
+            Log::debug($e->getMessage());
+            abort(500);
+        }
     }
 }
