@@ -27,6 +27,7 @@
         <style>
             body {
                 padding-top: 5rem;
+                margin-top: 1rem;
             }
             .starter-template {
                 padding: 3rem 1.5rem;
@@ -47,8 +48,8 @@
             }
         </style>
     </head>
-    <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <body class="jumbotron" style="background: url(../worldcup.jpg); background-size:cover; background-color:rgba(255,255,255,0.2);">
+        <nav class="navbar navbar-expand-md navbar-dark bg-info fixed-top">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -81,10 +82,10 @@
                 </form>
             </div>
         </nav>
-        <main role="main" class="container">
+        <main role="main" class="container text-white">
                 <h1>WorldCup 2014 選手一覧</h1>
                 </br>
-                <table class="table table-striped table-hover table-sm table-responsive-sm">
+                <table class="table table-striped table-hover table-sm table-responsive-sm text-white">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
